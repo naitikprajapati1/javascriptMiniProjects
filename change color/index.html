@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Color</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            width: 100%;
+            background-color: #212121;
+            color: whitesmoke;
+            gap: 3rem;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        button {
+            height: 200px;
+            width: 133px;
+            border: 1px solid whitesmoke;
+            cursor: pointer;
+            transition: 0.3s all ease-in-out;
+        }
+
+        button:active {
+            scale: 0.75;
+        }
+
+        #gray {
+            background-color: gray;
+        }
+
+        #green {
+            background-color: green;
+        }
+
+        #red {
+            background-color: red;
+        }
+
+        #white {
+            background-color: white;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Change color</h1>
+
+    <div class="main">
+        <button id="gray"></button>
+        <button id="green"></button>
+        <button id="red"></button>
+        <button id="white"></button>
+    </div>
+
+    <script>
+        let body=document.querySelector('body');
+        let buttons=document.querySelectorAll('button');
+
+        buttons.forEach(function(button){
+            console.log(button);
+            button.addEventListener('click', (e)=>{
+               body.style.background=e.target.id;
+            })
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #212121;
+            color: whitesmoke;
+            gap: 20px;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        :is(#minus, #num, #plus) {
+            font-size: 33px;
+            background-color: aqua;
+            padding: 13px;
+            border-left: 1px solid black;
+            color: black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Counter App</h1>
+    <div id="container">
+        <p id="minus">-</p>
+        <p id="num">0</p>
+        <p id="plus">+</p>
+
+    </div>
+    <script>
+        let num = document.getElementById('num');
+        let plus = document.getElementById('plus');
+        let minus = document.getElementById('minus');
+
+        function incr() {
+            let inner = Number(num.innerHTML);
+            inner = inner + 1;
+            num.innerHTML = inner;
+        }
+        function decr() {
+            let inner = Number(num.innerHTML);
+            if (inner <= 0) {
+                num.innerHTML = 0
+            }
+            else {
+                inner = inner - 1;
+                num.innerHTML = inner;
+            }
+        }
+
+        plus.addEventListener('click', incr);
+        minus.addEventListener('click', decr);
+    </script>
+</body>
+
+</html>
