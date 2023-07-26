@@ -11,14 +11,15 @@ let symbolCheck = document.querySelector("#Symbols");
 const indicator = document.querySelector("[data-indicator]");
 const generateBtn = document.querySelector(".generateButton");
 const allCheckBox = document.querySelectorAll("input[type=checkbox]");
+let error=document.querySelector('#error-para');
 let symbol = '~`!@#$%^&*()_-+={[}]|:;"<,>.?/';
 
 let password = "";
 let passwordLength = 10;
-let checkCount = 1;
+let checkCount = 0;
 handleSlider();
 // set strength color to gray
-setIndicator('#ccc')
+setIndicator("#ccc");
 // set password length according to  slider changes
 function handleSlider() {
   inputslider.value = passwordLength;
@@ -28,7 +29,6 @@ function handleSlider() {
 function setIndicator(color) {
   indicator.style.backgroundColor = color;
   indicator.style.boxShadow = `0px 0px 12px 1px ${color}`;
-
 }
 
 function getRandomNum(min, max) {
@@ -53,12 +53,11 @@ function calculateStrength() {
   let hasLower = false;
   let hasNumber = false;
   let hasSymbol = false;
-  if (upperCaseCheck.checked) hasUpper=true;
-  if (lowerCaseCheck.checked) hasLower=true;
-  if (numbersCheck.checked) hasNumber=true;
-  if (symbolCheck.checked) hasSymbol=true;
-    
-  
+  if (upperCaseCheck.checked) hasUpper = true;
+  if (lowerCaseCheck.checked) hasLower = true;
+  if (numbersCheck.checked) hasNumber = true;
+  if (symbolCheck.checked) hasSymbol = true;
+
   if (hasUpper && hasLower && (hasNumber || hasSymbol) && passwordLength >= 8) {
     setIndicator("#0f0");
   } else if (
@@ -81,16 +80,12 @@ async function copyContent() {
   }
   // to make copy wala text visible
   copyMSg.classList.add("active");
+
   setTimeout(() => {
     copyMSg.classList.remove("active");
   }, 2000);
 }
 
-// function shufflePassword(shufflePAssword){
-//     console.log(shufflePAssword);
-//     // Fisher Yates MEthod
-// }
-//
 function handleCheckBoxChange() {
   checkCount = 0;
   allCheckBox.forEach((checkbox) => {
@@ -117,13 +112,19 @@ copyBtn.addEventListener("click", (e) => {
     copyContent();
   }
 });
-
+//------------------- Generate button -----------------------
 generateBtn.addEventListener("click", function (e) {
-  document.getElementById('myaudio').play();
+  document.getElementById("myaudio").play();
+    if (checkCount <= 0) {
+        error.style.display="block";
+        return;
+      }
+      else{
+    error.style.display="none";
 
-  if (checkCount <= 0) {
-    return;
-  }
+      }
+  //   console.log(checkCount);
+  
   if (passwordLength < checkCount) {
     passwordLength = checkCount;
     handleSlider();
@@ -171,9 +172,10 @@ generateBtn.addEventListener("click", function (e) {
     let randomIndex = getRandomNum(0, funcArr.length);
     password += funcArr[randomIndex];
   }
-//   shuffle password
-// password=shufflePAssword(Array.from(password));
-passwordDisplay.value=password;
-calculateStrength();
+  //   shuffle password
+  // password=shufflePAssword(Array.from(password));
+  passwordDisplay.value = password;
 
+  //   console.log(passwordDisplay.value);
+  calculateStrength();
 });
