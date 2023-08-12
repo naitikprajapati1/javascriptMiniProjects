@@ -1,5 +1,5 @@
 let bubbles = "";
-let timer = 60;
+let timer = 5;
 let randomHits = 0;
 let score = 0;
 let audio=document.querySelector('#click-audio');
@@ -20,6 +20,8 @@ function timerCount() {
     }
     else{
 clearInterval(set);
+document.querySelector("#bubbles").removeEventListener("click", clickHandler);
+
 document.querySelector('#bubbles').innerHTML =`<div id="para-group">
 <h3 id="para-bubble">Game Over</h3>
 <h3 id="para-bubble">Your Current Score is ${score}</h3>
@@ -46,12 +48,13 @@ function scoresCount(value) {
 timerCount();
 hitsCount();
 
-document.querySelector("#bubbles").addEventListener("click", function (e) {
-    audio.play();
+function clickHandler(e) {
+  audio.play();
   let value = Number(e.target.innerHTML);
   scoresCount(value);
-  // console.log(e.target.innerHTML);
-});
+}
+document.querySelector("#bubbles").addEventListener("click", clickHandler);
+
 // document.querySelector('#refresh').addEventListener("click",function(){
 //     location.reload();
 // })
