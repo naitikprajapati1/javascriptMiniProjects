@@ -1,5 +1,5 @@
 let bubbles = "";
-let timer = 5;
+let timer = 30;
 let randomHits = 0;
 let score = 0;
 let audio=document.querySelector('#click-audio');
