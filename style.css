@@ -74,9 +74,11 @@ h1 {
 }
 
 .project-link {
+  /* box-shadow: 10px 10px #f8f9fa 100px 10; */
+  /* box-shadow: #f8f8f92a 6px 1px 12px 1px; */
 
   background-color: #f8f9fa;
-  padding: 10px 30px;
+  padding: 20px 30px;
   border-radius: 8px;
   color: #212121;
   font-weight: 500;
