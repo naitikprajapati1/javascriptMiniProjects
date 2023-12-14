@@ -134,3 +134,11 @@ footer p a {
   text-decoration: underline;
   color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+  .projects {
+    min-width: 500px;
+    width: 50%;
+    margin-bottom: 0px;
+  }
+}
