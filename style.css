@@ -5,8 +5,16 @@
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
-  color: black;
-  background-color: white;
+  /* color: black; */
+  /* background-color: #212529; */
+  background-color: #22223b !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /* background: linear-gradient(rgb(55, 43, 226), rgb(82, 5, 154)); */
+
+
 }
 
 nav {
@@ -15,14 +23,18 @@ nav {
   align-items: center;
   justify-content: center;
   padding: 0.5rem;
+  padding-block: 20px;
   gap: 0.5rem;
   border-bottom: solid 1px #fff;
-  background-color: rgb(255, 225, 0);
+  /* background-color: rgb(255, 225, 0); */
   background-color: #865DFF;
-  background-color: #ff8d1b;
+  color: #fff !important;
+  background-color: #22223b;
   position: sticky;
-  top: 10px;
+  top: 1px;
   width: 100%;
+
+
 
   /* width: 50%; */
 }
@@ -32,7 +44,7 @@ nav a {
   min-width: 9rem;
   padding: 0.5rem;
   border-radius: 0.2rem;
-  border: solid 1px rgb(22, 22, 22);
+  /* border: solid 1px rgb(255, 0, 0); */
   text-align: center;
   text-decoration: none;
   color: hsl(0, 0%, 11%);
@@ -51,18 +63,25 @@ main {
 h1 {
   font-weight: bold;
   font-size: 1.5rem;
+  color: #fff;
 }
 
 .projects {
+  width: 100%;
+  min-width: 800px;
   display: flex;
+  margin-top: 10px;
+  margin-bottom: 100px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 16px;
 }
 
 .project-link {
   background-color: rgb(255, 225, 0);
   background-color: #ff8d1b;
+  background-color: #f8f9fa;
 
   padding: 10px 30px;
   border-radius: 8px;
@@ -72,6 +91,12 @@ h1 {
   border: 1px solid #212121;
   margin-top: 5px;
   width: 70%;
+  transition: all ease-in 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+
+  }
 }
 
 footer {
@@ -91,9 +116,11 @@ footer {
   padding: 0.5rem;
   border-top: solid 1px #fff;
   background-color: rgb(255, 225, 0);
-  background-color: #865DFF;
-  background-color: #ff8d1b;
-  color: #000;
+  /* background-color: #865DFF; */
+  /* background-color: #ff8d1b; */
+  /* background: linear-gradient(rgb(55, 43, 226), rgb(82, 5, 154)); */
+  background-color: #22223b;
+  color: #fff;
   font-size: 18px;
   text-transform: capitalize;
   font-weight: 600;
@@ -105,5 +132,5 @@ footer p {
 
 footer p a {
   text-decoration: underline;
-  color: #000;
+  color: #fff;
 }

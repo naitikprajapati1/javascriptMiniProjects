@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookList App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <section class="container">
+        <form id="book-form">
+            <div>
+                <label for="title">Book Title</label>
+                <input type="text" id="title" />
+            </div>
+            <div>
+                <label for="author">Book Author</label>
+                <input type="text" id="author" />
+            </div>
+            <div>
+                <label for="year">Published Year</label>
+                <input type="number" id="year" />
+            </div>
+            <!-- <div> -->
+            <div>
+                <button type="submit" class="btn">Add Book</button>
+                <!-- <button type="button" class="btn btn-Update  none">Update Book </button> -->
+                <!-- </div> -->
+                <span class="error  none" style="color: rgb(255, 36, 36);  margin-block:23px; ">Please Fill Details in
+                    The Input
+                    fields</span>
+            </div>
+        </form>
+
+        <section class="table">
+            <section class="table-section">
+                <div>Title</div>
+                <div>Author</div>
+                <div>Year</div>
+                <div>O/P</div>
+            </section>
+
+            <section id="book-list">
+
+                </div>
+
+            </section>
+        </section>
+    </section>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
