@@ -5,14 +5,11 @@
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
-  /* color: black; */
-  /* background-color: #212529; */
   background-color: #22223b !important;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  /* background: linear-gradient(rgb(55, 43, 226), rgb(82, 5, 154)); */
 
 
 }
@@ -26,7 +23,6 @@ nav {
   padding-block: 20px;
   gap: 0.5rem;
   border-bottom: solid 1px #fff;
-  /* background-color: rgb(255, 225, 0); */
   background-color: #865DFF;
   color: #fff !important;
   background-color: #22223b;
@@ -44,7 +40,6 @@ nav a {
   min-width: 9rem;
   padding: 0.5rem;
   border-radius: 0.2rem;
-  /* border: solid 1px rgb(255, 0, 0); */
   text-align: center;
   text-decoration: none;
   color: hsl(0, 0%, 11%);
@@ -79,10 +74,8 @@ h1 {
 }
 
 .project-link {
-  background-color: rgb(255, 225, 0);
-  background-color: #ff8d1b;
-  background-color: #f8f9fa;
 
+  background-color: #f8f9fa;
   padding: 10px 30px;
   border-radius: 8px;
   color: #212121;
@@ -115,10 +108,7 @@ footer {
   justify-content: center;
   padding: 0.5rem;
   border-top: solid 1px #fff;
-  background-color: rgb(255, 225, 0);
-  /* background-color: #865DFF; */
-  /* background-color: #ff8d1b; */
-  /* background: linear-gradient(rgb(55, 43, 226), rgb(82, 5, 154)); */
+
   background-color: #22223b;
   color: #fff;
   font-size: 18px;
