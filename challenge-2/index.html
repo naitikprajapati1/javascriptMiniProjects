@@ -1,0 +1,33 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Text Color</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="mainHeading">Change My Color!</h1>
+    <p>Click a button to change the text color:</p>
+
+    <div class="color-buttons">
+      <button id="redButton">Red</button>
+      <button id="greenButton">Green</button>
+      <button id="blueButton">Blue</button>
+      <button id="purpleButton">Purple</button>
+      <button id="resetButton">Reset</button>
+    </div>
+<script>
+  const buttons=document.querySelectorAll(".color-buttons");
+  let myheading=document.querySelector("#mainHeading")
+  buttons.forEach(value => {
+    value.addEventListener("click",function(e) {
+      myheading.style.color=e.target.innerHTML
+      if (e.target.id==="resetButton") {
+      myheading.style.color="#2b2b2b"
+      }
+    })
+  });
+</script>
+    <!-- <script src="app.js"></script> -->
+  </body>
+</html>

@@ -2,39 +2,205 @@
 <html lang="en">
 
 <head>
-  <title>Home</title>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript DOM Projects | Learn by Building</title>
+  <meta name="description" content="Collection of JavaScript DOM manipulation projects from beginner to advanced level">
   <link rel="stylesheet" href="./style.css">
+  <!-- Add Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
-<body style="background-color: #191825; color: #fff">
-  <nav style="color: #2b2b2b; font-size: 23px; text-transform: capitalize; font-weight: 600;">
-    Js mini Projects
+<body>
+  <nav class="navbar">
+    <div class="nav-content">
+      <h1><i class="fab fa-js"></i> JavaScript DOM Projects</h1>
+      <div class="nav-controls">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-sun light-icon"></i>
+          <i class="fas fa-moon dark-icon"></i>
+        </button>
+      </div>
+    </div>
   </nav>
-  <main>
-    <div class="projects">
-      <a class="project-link" href="Counter App/index.html">Project 1 - Counter App 🔢</a>
-      <a class="project-link" href="./change color/index.html">Project 2 - color Changer 🔥</a>
-      <a class="project-link" href="./Digital Clock/index.html">Project 3 - Digital clock 😎</a>
-      <a class="project-link" href="./GuessNumber/index.html">Project 4 - Guess the number 🤨</a>
-      <a class="project-link" href="./Modal/index.html">Project 5 - Animated Modal 👍🏻</a>
-      <a class="project-link" href="./Password Generator/index.html">Project 6 - Password Generator 🔑</a>
-      <a class="project-link" href="./Random Color/index.html">Project 7 - Random Color Generator 🎨</a>
-      <a class="project-link" href="./Random User Generator/index.html">Project 8 - Random User Generator 👨🏻‍🏫</a>
-      <a class="project-link" href="./Bubbling Game/index.html">Project 9 - Bubbling Game 🎮</a>
-      <a class="project-link" href="./10_CRUD/index.html">Project 10 - CRUD Book List App 📚</a>
 
-      <a class="project-link" href="./calculator/index.html">Project 11 - calculator App 📚</a>
+  <main class="container">
+    <div class="difficulty-tabs">
+      <button class="tab active" data-difficulty="all">All Projects</button>
+      <button class="tab" data-difficulty="beginner">Beginner</button>
+      <button class="tab" data-difficulty="intermediate">Intermediate</button>
+      <button class="tab" data-difficulty="advanced">Advanced</button>
+    </div>
 
+    <div class="projects-grid">
+      <!-- Beginner Projectts -->
+      <a class="project-card beginner" href="./challenge-1/index.html">
+        <div class="card-content">
+          <i class="fas fa-lightbulb project-icon"></i>
+          <h3>Bulb On Off</h3>
+          <p class="project-description">Learn basic DOM manipulation With Event handling</p>
+          <span class="difficulty">Beginner</span>
+        </div>
+      </a>
+
+      <a class="project-card beginner" href="./challenge-2/index.html">
+        <div class="card-content">
+          <i class="fas fa-fingerprint project-icon"></i>
+          <h3>Change Text Color</h3>
+          <p class="project-description">Learn basic DOM manipulation With Click Event</p>
+          <span class="difficulty">Beginner</span>
+        </div>
+      </a>
+
+
+      <a class="project-card beginner" href="./challenge-3/index.html">
+        <div class="card-content">
+          <i class="fas fa-info project-icon"></i>
+          <h3>RealTime information Update</h3>
+          <p class="project-description">Learn basic DOM manipulation With Click Event</p>
+          <span class="difficulty">Beginner</span>
+        </div>
+      </a>
+
+      <a class="project-card beginner" href="./Random Color/index.html">
+        <div class="card-content">
+          <i class="fas fa-cloud-moon project-icon"></i>
+          <h3>Random Colors</h3>
+          <p class="project-description">Random Color Generation</p>
+          <span class="difficulty">Beginner</span>
+        </div>
+      </a>
+      <a class="project-card beginner" href="./change color/index.html">
+        <div class="card-content">
+          <i class="fas fa-paint-brush project-icon"></i>
+          <h3>Background Color Changer</h3>
+          <p class="project-description">Practice working with DOM events and styling</p>
+          <span class="difficulty">Beginner</span>
+        </div>
+      </a>
+
+
+      <a class="project-card beginner" href="./Modal/index.html">
+        <div class="card-content">
+          <i class="fas fa-cocktail project-icon"></i>
+          <h3>Modal Open</h3>
+          <p class="project-description">Practice working with DOM events and styling</p>
+          <span class="difficulty">Beginner</span>
+        </div>
+      </a>
+
+      <a class="project-card intermediate" href="./challenge-4/index.html">
+        <div class="card-content">
+          <i class="fas fa-tasks project-icon"></i>
+          <h3>Task List Application</h3>
+          <p class="project-description">Advance DOM manipulation and event handling</p>
+          <span class="difficulty">Intermediate</span>
+        </div>
+      </a>
+      <a class="project-card intermediate" href="./Random User Generator/index.html">
+        <div class="card-content">
+          <i class="fas fa-user project-icon"></i>
+          <h3>Random User Profile Generator
+          </h3>
+            <p class="project-description">Learn how to work with APIs</p>
+          <span class="difficulty">Intermediate</span>
+        </div>
+      </a>
+      <a class="project-card intermediate" href="./Bubbling Game/index.html">
+        <div class="card-content">
+          <i class="fas fa-hands-bubbles project-icon"></i>
+          <h3>Bubbling Game</h3>
+          <p class="project-description">Advance DOM manipulation and event handling</p>
+          <span class="difficulty">Intermediate</span>
+        </div>
+      </a>
+      
+      <a class="project-card intermediate" href="./challenge-5/index.html">
+        <div class="card-content">
+          <i class="fas fa-images project-icon"></i>
+          <h3>Image Slider</h3>
+          <p class="project-description">Advance DOM manipulation</p>
+          <span class="difficulty">Intermediate</span>
+        </div>
+      </a>
+      <a class="project-card intermediate" href="./AddDynamicButtons/">
+        <div class="card-content">
+          <i class="fas fa-mobile-button project-icon"></i>
+          <h3>dynamically Buttons</h3>
+            <p class="project-description">Implement this using Closures</p>
+          <span class="difficulty">Intermediate</span>
+        </div>
+      </a>
+      <!-- Intermediate Projects -->
+      <a class="project-card advanced" href="./Password Generator/index.html">
+        <div class="card-content">
+          <i class="fas fa-key project-icon"></i>
+          <h3>Password Generator</h3>
+          <p class="project-description">Work with strings and random generation</p>
+          <span class="difficulty">Advanced</span>
+        </div>
+      </a>
+
+      <!-- Advanced Projects -->
+      <a class="project-card advanced" href="./10_CRUD/index.html">
+        <div class="card-content">
+          <i class="fas fa-book project-icon"></i>
+          <h3>CRUD Book List</h3>
+          <p class="project-description">Full CRUD operations with local storage</p>
+          <span class="difficulty">Advanced</span>
+        </div>
+      </a>
+      <a class="project-card advanced" href="./GuessNumber/index.html">
+        <div class="card-content">
+          <i class="fas fa-sort-numeric-up project-icon"></i>
+          <h3>Number Guessing Games</h3>
+          <p class="project-description">Number Guessing Game</p>
+          <span class="difficulty">Advanced</span>
+        </div>
+      </a>
+
+      
     </div>
   </main>
-  <footer>
-    <p>Connect with me on Linkdin :-
-      <a href="https://www.linkedin.com/in/naitik-prajapati/" target="_blank">Naitik Prajapati</a>
-    </p>
-  </footer>
+
+<!-- Replace the existing footer with this improved version -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-main">
+      <div class="footer-branding">
+        <h3><i class="fab fa-js"></i> JavaScript DOM Projects</h3>
+      </div>
+      <div>
+        <p class="footer-description">A collection of hands-on projects to master JavaScript DOM manipulation</p>
+
+      </div>
+      <!-- <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#" data-difficulty="beginner">Beginner Projects</a></li>
+          <li><a href="#" data-difficulty="intermediate">Intermediate Projects</a></li>
+          <li><a href="#" data-difficulty="advanced">Advanced Projects</a></li>
+        </ul>
+      </div> -->
+    </div>
+    <div class="footer-bottom">
+      <p class="copyright">© <span class="year"></span> Created with <span class="heart">❤️</span> by Naitik Prajapati</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/naitik-prajapati/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/naitikprajapati01" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:naitik@devfluence.in" aria-label="Email Contact">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="./script.js"></script>
 </body>
 
 </html>
